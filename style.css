@@ -1,0 +1,118 @@
+html {
+	font-size: 32px;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	color: #eee;
+	text-transform: uppercase;
+	font-family: sans-serif;
+}
+
+.choosing .result,
+.choosing .aiPlay {
+	display: none;
+}
+
+body {
+	background: radial-gradient(rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.8)), hsl(240, 64%, 27%);
+	height: 100vh;
+	width: 100vw;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 1rem;
+}
+
+header {
+	display: flex;
+	gap: 20rem;
+	border: solid #bbb;
+	border-radius: 1rem;
+	padding: 1rem;
+	align-items: center;
+}
+
+header .scoreContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+
+	font-size: 1.5em;
+
+	background-color: #ddd;
+	border-radius: 0.3rem;
+	border: solid #777;
+	padding: 0 1rem;
+	height: 100%;
+
+	text-shadow: #aaa 0 0 1rem;
+}
+
+header .scoreContainer * {
+	color: #111;
+	overflow: visible;
+}
+
+header .scoreContainer .scores {
+	font-size: 2em;
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+header .scoreContainer .scores .scoreDivisor {
+	font-size: 0.5em;
+}
+
+footer {
+	width: 100%;
+	display: flex;
+	justify-content: end;
+	gap: 1rem;
+}
+
+footer button {
+	display: block;
+	background: none;
+	border: solid #ddd;
+	padding: 0.5rem 1rem;
+	border-radius: 0.3rem;
+	font-size: 0.5em;
+}
+
+.gamer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.choices {
+    background-color: #ddd;
+    border-radius: 50%;
+    border: solid 1rem red;
+    }
+
+.choices.paper {
+    border-color: hsl(240, 81%, 60%);
+    box-shadow: inset 0.1rem 0.3rem 0.3rem rgba(50, 50, 50, 0.5), 0.05rem 0.2rem 0rem rgba(50, 50, 250, 0.7);
+}
+
+.choices.rock {
+    border-color: hsl(0, 81%, 55%);
+    box-shadow: inset 0.1rem 0.3rem 0.3rem rgba(50, 50, 50, 0.5), 0.05rem 0.2rem 0rem rgba(250, 50, 50, 0.7);
+}
+
+.choices.scissors {
+    border-color: hsl(45, 81%, 55%);
+    box-shadow: inset 0.1rem 0.3rem 0.3rem rgba(50, 50, 50, 0.5), 0.05rem 0.2rem 0rem rgba(250, 200, 50, 0.7);
+}

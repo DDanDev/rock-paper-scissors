@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+        <link rel="stylesheet" href="style.css">
+        
+        <title>Rock, Paper, Scissors</title>
+	</head>
+	<body>
+		<header>
+			<h1>Rock<br />Paper<br />Scissors</h1>
+			<div class="scoreContainer">
+				<p class="scoreTitle">Score</p>
+				<div class="scores">
+					<p class="scoreNumber">0</p>
+					<p class="scoreDivisor">X</p>
+					<p class="scoreNumber">0</p>
+				</div>
+			</div>
+		</header>
+		<main class="choosing">
+			<div class="gamer">
+				<p class="gamerState">Choose one!</p>
+				<div class="choicesContainer">
+					<img src="./images/rock.svg" alt="rock" class="choices chosen rock" />
+					<img src="./images/paper.svg" alt="Paper" class="choices paper" />
+					<img src="./images/scissors.svg" alt="scissors" class="choices scissors" />
+				</div>
+			</div>
+			<div class="result">
+                <p id="result">bla</p>
+				<button id="playAgain">Play Again</button>
+			</div>
+			<div class="aiPlay">
+                <p class="aiState">Your computer chose</p>
+                <div class="choicesContainer">
+                    <img src="./images/rock.svg" alt="rock" class="choices chosen rock" />
+                    <img src="./images/paper.svg" alt="Paper" class="choices paper" />
+                    <img src="./images/scissors.svg" alt="scissors" class="choices scissors" />
+                </div>
+            </div>
+		</main>
+		<footer>
+			<button id="showRules">Rules</button>
+			<button id="resetScore">Reset</button>
+		</footer>
+	</body>
+</html>
