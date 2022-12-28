@@ -97,6 +97,9 @@ header .scoreContainer .scores .scoreDivisor {
 .scoreNumber {
 	text-align: center;
 	width: 3.4rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .scoreNumber small {
