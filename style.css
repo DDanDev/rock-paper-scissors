@@ -96,6 +96,7 @@ header .scoreContainer .scores .scoreDivisor {
 
 .scoreNumber {
 	text-align: center;
+	width: 3.4rem;
 }
 
 .scoreNumber small {
