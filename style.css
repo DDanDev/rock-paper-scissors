@@ -114,6 +114,7 @@ footer {
 
 footer a {
 	color: #ddd;
+	text-transform: none;
 }
 
 button {
