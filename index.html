@@ -15,37 +15,38 @@
 			<div class="scoreContainer">
 				<p class="scoreTitle">Score</p>
 				<div class="scores">
-					<p class="scoreNumber">0</p>
+					<p id="gamerScore" class="scoreNumber">0</p>
 					<p class="scoreDivisor">X</p>
-					<p class="scoreNumber">0</p>
+					<p id="aiScore" class="scoreNumber">0</p>
 				</div>
 			</div>
 		</header>
-		<main class="choosing">
+		<main id="gameArea" class="choosing">
 			<div class="gamer">
 				<p class="gamerState">Choose one!</p>
-				<div class="choicesContainer">
-					<img src="./images/rock.svg" alt="rock" class="choices chosen rock" />
-					<img src="./images/paper.svg" alt="Paper" class="choices paper" />
-					<img src="./images/scissors.svg" alt="scissors" class="choices scissors" />
+				<div id="gamerChoices" class="choicesContainer">
+					<img src="./images/rock.svg" alt="Rock" id="chooseRock" class="choices rock" />
+					<img src="./images/paper.svg" alt="Paper" id="choosePaper" class="choices paper" />
+					<img src="./images/scissors.svg" alt="Scissors" id="chooseScissors" class="choices scissors" />
 				</div>
 			</div>
 			<div class="result">
-                <p id="result">bla</p>
+                <p id="result">You Win!</p>
 				<button id="playAgain">Play Again</button>
 			</div>
 			<div class="aiPlay">
                 <p class="aiState">Your computer chose</p>
                 <div class="choicesContainer">
-                    <img src="./images/rock.svg" alt="rock" class="choices chosen rock" />
-                    <img src="./images/paper.svg" alt="Paper" class="choices paper" />
-                    <img src="./images/scissors.svg" alt="scissors" class="choices scissors" />
+                    <img src="./images/rock.svg" alt="Rock" id="aiChooseRock" class="choices rock" />
+                    <img src="./images/paper.svg" alt="Paper" id="aiChoosePaper" class="choices paper" />
+                    <img src="./images/scissors.svg" alt="Scissors" id="aiChooseScissors" class="choices scissors" />
                 </div>
             </div>
 		</main>
 		<footer>
-			<button id="showRules">Rules</button>
+			<small><a href="http://github.com/DDanDev" target="_blank">by github.com/DDanDev</a></small>
 			<button id="resetScore">Reset</button>
 		</footer>
 	</body>
+	<script src="game.js"></script>
 </html>
