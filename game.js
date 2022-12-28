@@ -17,33 +17,6 @@ var isGameChoosing = () => {
 var gamerChoice;
 var aiChoice;
 
-// test js random generating a choice reliability
-// function testRand(tries) {
-// 	var randNumber = Math.random();
-// 	var randLength = randNumber.toString().length;
-// 	var randMinLen = randLength;
-// 	var randMaxLen = randLength;
-
-//     var chosens = [];
-//     for (let i = 0; i <= choices.length; i++) {
-//         chosens[i] = 0
-//     }
-
-// 	for (let i = 0; i < tries; i++) {
-//         var randNumber = Math.random();
-//         var randLength = randNumber.toString().length;
-
-//         randLength > randMaxLen ? randMaxLen = randLength : null;
-//         randLength < randMinLen ? randMinLen = randLength : null;
-
-// 		var randChoice = Math.floor(Math.random() * aiChoices.length);
-//         chosens[randChoice]++
-// 	}
-
-// 	console.log("Min random number length " + randMinLen);
-// 	console.log("Max random number length " + randMaxLen);
-// 	console.log("How many times did it choose each " + chosens);
-// }
 
 // actions
 // change play state choosing to resultState
@@ -52,31 +25,31 @@ function playChoice(gamerChoiceN) {
 		return;
 	}
 	gameArea.className = "resultState";
-
+	
 	// set gamer's choice
 	gamerChoice = jsChoices[gamerChoiceN];
 	document.getElementById("choose" + gamerChoice).classList.add("chosen");
-
+	
 	// console.log("gamer chose " + gamerChoice);
-
+	
 	// set ai's choice
-	aiChoiceN = Math.floor(Math.random() * jsChoices.length);
+	var aiChoiceN = Math.floor(Math.random() * jsChoices.length);
 	aiChoice = jsChoices[aiChoiceN];
 	document.getElementById("aiChoose" + aiChoice).classList.add("chosen");
 	// console.log("ai chose " + aiChoice);
-
+	
 	// set who wins
 	aiChoiceN === 2 && gamerChoiceN === 0 ? (aiChoiceN = -1) : null;
 	var winner;
 	gamerChoiceN - 1 === aiChoiceN ? (winner = "gamer") : gamerChoiceN === aiChoiceN ? (winner = "draw") : (winner = "ai");
 	// console.log(winner + " wins");
-
+	
 	//display winner
 	document.getElementById("result").innerText = winner === "gamer" ? "You Win!" : winner === "draw" ? "Draw!!" : "Computer Wins!";
-
+	
 	// add to score
 	winner === "gamer" ? gamerScore++ : winner === "ai" ? aiScore++ : null;
-
+	
 	// display scores
 	updateScoreBoard();
 }
@@ -112,3 +85,31 @@ document.getElementById("resetScore").addEventListener("click", () => {
 	updateScoreBoard();
 	waitForNewChoice();
 });
+
+// test js random generating a choice reliability
+function testRand(tries) {
+	var randNumber = Math.random();
+	var randLength = randNumber.toString().length;
+	var randMinLen = randLength;
+	var randMaxLen = randLength;
+
+    var chosens = [];
+    for (let i = 0; i <= domChoices.length; i++) {
+        chosens[i] = 0
+    }
+
+	for (let i = 0; i < tries; i++) {
+        var randNumber = Math.random();
+        var randLength = randNumber.toString().length;
+
+        randLength > randMaxLen ? randMaxLen = randLength : null;
+        randLength < randMinLen ? randMinLen = randLength : null;
+
+		var randChoice = Math.floor(Math.random() * jsChoices.length);
+        chosens[randChoice]++
+	}
+
+	console.log("Min random number length " + randMinLen);
+	console.log("Max random number length " + randMaxLen);
+	console.log("How many times did it choose each " + chosens);
+}
